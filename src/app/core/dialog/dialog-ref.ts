@@ -3,7 +3,7 @@ import { InjectionToken } from '@angular/core';
 import { Subject } from 'rxjs';
 import { take } from 'rxjs/operators';
 
-export const DIALOG_DATA = new InjectionToken('UI_DIALOG_DATA');
+export const DIALOG_DATA = new InjectionToken('DIALOG_DATA');
 
 export class DialogRef {
   private _afterClosed = new Subject();
@@ -28,8 +28,6 @@ export class DialogRef {
   ) {}
 
   close(data?: unknown) {
-    // it's better to close it in the next tick, to complete all the
-    //neccessary functions, like send closing event in GA or smth
     setTimeout(() => {
       this.overlayRef.dispose();
       this._afterClosed.next(data);

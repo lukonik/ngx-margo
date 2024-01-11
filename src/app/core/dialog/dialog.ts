@@ -98,6 +98,9 @@ export class Dialog {
 
     overlayRef.attach(compPortal);
 
-    return dialogRef as Pick<DialogRef, 'afterClosed' | 'close'>;
+    return dialogRef as Pick<
+      DialogRef,
+      'afterClosed' | 'close' | 'keepOnBackdropClick'
+    >;
   }
 }
