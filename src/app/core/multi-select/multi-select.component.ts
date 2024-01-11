@@ -1,35 +1,27 @@
 import {
-  AfterContentInit,
   ChangeDetectionStrategy,
   Component,
-  ContentChildren,
   Input,
-  OnDestroy,
-  QueryList,
-  effect,
   inject,
-  signal,
 } from '@angular/core';
+import { MultiSelectState } from './multi-select.state';
 import {
   ConnectedPosition,
   Overlay,
   OverlayModule,
 } from '@angular/cdk/overlay';
-import { SelectItemComponent } from './select-item/select-item.component';
 import { Subscription } from 'rxjs';
-import { SelectState } from './select.state';
 
 @Component({
-  selector: 'app-select',
+  selector: 'app-multi-select',
   standalone: true,
   imports: [OverlayModule],
-  templateUrl: './select.component.html',
-  styleUrl: './select.component.scss',
+  templateUrl: './multi-select.component.html',
+  styleUrl: './multi-select.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  providers: [SelectState],
+  providers: [MultiSelectState],
 })
-export class SelectComponent {
-
+export class MultiSelectComponent {
   overlay = inject(Overlay);
 
   scroll = this.overlay.scrollStrategies.close();
@@ -48,13 +40,10 @@ export class SelectComponent {
     },
   ];
 
-
-  selectState = inject(SelectState);
+  selectState = inject(MultiSelectState);
 
   @Input()
-  set compareWith(compareWith:any){
-    this.selectState.compareWith=compareWith;
+  set compareWith(compareWith: any) {
+    this.selectState.compareWith = compareWith;
   }
-
-
 }
