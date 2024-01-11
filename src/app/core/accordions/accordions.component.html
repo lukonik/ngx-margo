@@ -1,0 +1,20 @@
+<div style="border-bottom: 2px solid black">
+  @for (accordion of accordions; track accordion.accordionId) {
+
+  <div
+    [class.selected]="accordion.isSelected()"
+    (click)="accordionsState.selectAccordion(accordion.accordionId)"
+  >
+    @if(accordion.accordionHeader){
+    <ng-container
+      *ngTemplateOutlet="accordion.accordionHeader.tempRef"
+    ></ng-container>
+    } @else{
+    {{ accordion.label }}
+    }
+  </div>
+
+  }
+</div>
+
+<ng-content></ng-content>

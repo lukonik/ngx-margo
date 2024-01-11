@@ -6,8 +6,6 @@ export class TabsState {
 
   private _selectedTab = signal<number>(0);
 
-  private _tabTracker = new Set<number>();
-
   selectedTab = this._selectedTab.asReadonly();
 
   selectTab(tabIndex: number) {
@@ -20,9 +18,5 @@ export class TabsState {
 
   addTab() {
     return this.startTabId++;
-  }
-
-  removeTab(tracker: number) {
-    this._tabTracker.delete(tracker);
   }
 }

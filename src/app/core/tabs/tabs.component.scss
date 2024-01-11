@@ -1,3 +1,23 @@
 .selected {
   color: red;
 }
+
+.tab-label {
+  color: var(--M3-sys-light-on-surface, #1d1b20);
+  text-align: center;
+
+  /* M3/title/small */
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: 0.1px;
+  height: 48px;
+  text-align: center;
+  line-height: 48px;
+}
+
+.tabs-label-container {
+  display: flex;
+}

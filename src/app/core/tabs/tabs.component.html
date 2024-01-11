@@ -1,19 +1,14 @@
-<div style="border-bottom: 2px solid black">
-  @for (tab of tabs; track tab.tabId) {
-
-  <div
-    [class.selected]="tab.isSelected()"
-    (click)="tabsState.selectTab(tab.tabId)"
-  >
-    @if(tab.tabHeader){
-    {{ tab.tabHeader }}
+<div class="tabs-label-container">
+  @for (tab of tabs; track tab.tabId) { @if(tab.tabHeader){
+  <div (click)="tabsState.selectTab(tab.tabId)">
     <ng-container *ngTemplateOutlet="tab.tabHeader.tempRef"></ng-container>
-    } @else{
+  </div>
+  } @else{
+  <div class="tab-label" [class.selected]="tab.isSelected()">
     {{ tab.label }}
-    }
   </div>
 
-  }
+  } }
 </div>
 
 <ng-content></ng-content>

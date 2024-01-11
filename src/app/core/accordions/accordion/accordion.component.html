@@ -1,0 +1,6 @@
+@if(isSelected()){ @if(accordionBody){
+<ng-container *ngTemplateOutlet="accordionBody.tempRef"></ng-container>
+} @else{
+<ng-content></ng-content>
+
+} }

@@ -12,6 +12,10 @@ import { TabsComponent } from '../../core/tabs/tabs.component';
 import { TabComponent } from '../../core/tabs/tab/tab.component';
 import { TabHeaderDirective } from '../../core/tabs/tab-header.directive';
 import { TabBodyDirective } from '../../core/tabs/tab-body.directive';
+import { AccordionBodyDirective } from '../../core/accordions/accordion-body.directive';
+import { AccordionComponent } from '../../core/accordions/accordion/accordion.component';
+import { AccordionHeaderDirective } from '../../core/accordions/accordion-header.directive';
+import { AccordionsComponent } from '../../core/accordions/accordions.component';
 
 @Component({
   selector: 'app-test-page',
@@ -28,6 +32,10 @@ import { TabBodyDirective } from '../../core/tabs/tab-body.directive';
     TabComponent,
     TabHeaderDirective,
     TabBodyDirective,
+    AccordionBodyDirective,
+    AccordionComponent,
+    AccordionHeaderDirective,
+    AccordionsComponent,
   ],
   templateUrl: './test-page.component.html',
   styleUrl: './test-page.component.scss',
