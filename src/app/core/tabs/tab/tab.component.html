@@ -1,0 +1,6 @@
+@if(isSelected()){ @if(tabBody){
+<ng-container *ngTemplateOutlet="tabBody.tempRef"></ng-container>
+} @else{
+<ng-content></ng-content>
+
+} }

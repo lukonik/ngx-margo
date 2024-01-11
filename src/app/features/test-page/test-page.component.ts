@@ -8,6 +8,10 @@ import { Dialog } from '../../core/dialog/dialog';
 import { TestDialogComponent } from './test-dialog/test-dialog.component';
 import { RadioGroupComponent } from '../../core/radio-group/radio-group.component';
 import { RadioButtonComponent } from '../../core/radio-group/radio-button/radio-button.component';
+import { TabsComponent } from '../../core/tabs/tabs.component';
+import { TabComponent } from '../../core/tabs/tab/tab.component';
+import { TabHeaderDirective } from '../../core/tabs/tab-header.directive';
+import { TabBodyDirective } from '../../core/tabs/tab-body.directive';
 
 @Component({
   selector: 'app-test-page',
@@ -20,6 +24,10 @@ import { RadioButtonComponent } from '../../core/radio-group/radio-button/radio-
     MultiSelectItemComponent,
     RadioGroupComponent,
     RadioButtonComponent,
+    TabsComponent,
+    TabComponent,
+    TabHeaderDirective,
+    TabBodyDirective,
   ],
   templateUrl: './test-page.component.html',
   styleUrl: './test-page.component.scss',
