@@ -9,3 +9,9 @@
   <app-multi-select-item [value]="item"></app-multi-select-item>
   }
 </app-multi-select>
+
+<app-radio-group>
+  @for (item of [1,2,3,4]; track $index) {
+  <app-radio-button [value]="item"></app-radio-button>
+  }
+</app-radio-group>

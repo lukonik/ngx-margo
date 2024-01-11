@@ -6,6 +6,8 @@ import { MultiSelectComponent } from '../../core/multi-select/multi-select.compo
 import { MultiSelectItemComponent } from '../../core/multi-select/multi-select-item/multi-select-item.component';
 import { Dialog } from '../../core/dialog/dialog';
 import { TestDialogComponent } from './test-dialog/test-dialog.component';
+import { RadioGroupComponent } from '../../core/radio-group/radio-group.component';
+import { RadioButtonComponent } from '../../core/radio-group/radio-button/radio-button.component';
 
 @Component({
   selector: 'app-test-page',
@@ -16,6 +18,8 @@ import { TestDialogComponent } from './test-dialog/test-dialog.component';
     SelectItemComponent,
     MultiSelectComponent,
     MultiSelectItemComponent,
+    RadioGroupComponent,
+    RadioButtonComponent,
   ],
   templateUrl: './test-page.component.html',
   styleUrl: './test-page.component.scss',
