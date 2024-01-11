@@ -1,1 +1,8 @@
-<app-button [loading]="booleanValue()">Hello</app-button>
+
+<app-select label="hello">
+    
+    @for (item of [1,2,3,4]; track $index) {
+        <app-select-item [value]="item"></app-select-item>
+    }
+
+</app-select>
