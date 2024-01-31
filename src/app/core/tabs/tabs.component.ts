@@ -8,6 +8,7 @@ import {
 import { TabComponent } from './tab/tab.component';
 import { NgTemplateOutlet } from '@angular/common';
 import { TabsState } from './tabs.state';
+import { trigger, transition, style, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-tabs',
@@ -17,6 +18,18 @@ import { TabsState } from './tabs.state';
   styleUrl: './tabs.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [TabsState],
+  animations: [
+    trigger('tabAnimation', [
+      transition(':decrement', [
+        style({ transform: 'translateX(100%)' }),
+        animate('300ms ease-in-out', style({ transform: 'translateX(0%)' })),
+      ]),
+      transition(':increment', [
+        style({ transform: 'translateX(-100%)' }),
+        animate('300ms ease-in-out', style({ transform: 'translateX(0%)' })),
+      ]),
+    ]),
+  ],
 })
 export class TabsComponent {
   @ContentChildren(TabComponent)

@@ -1,0 +1,19 @@
+<div>
+  @for (year of years(); track $index) {
+  <span
+    (click)="setYear(year)"
+    style="
+      border: 1px;
+      border-style: solid;
+      border-color: black;
+      margin-left: 10px;
+      margin-right: 10px;
+    "
+    >{{ year }}</span
+  >
+
+  } @for (month of months(); track $index) {
+  <p (click)="setMonth($index)">{{ month }}</p>
+  }
+  {{ activeDays() }}
+</div>

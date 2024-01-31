@@ -4,11 +4,16 @@
     <ng-container *ngTemplateOutlet="tab.tabHeader.tempRef"></ng-container>
   </div>
   } @else{
-  <div class="tab-label" [class.selected]="tab.isSelected()">
+  <div
+    class="tab-label"
+    (click)="tabsState.selectTab(tab.tabId)"
+    [class.selected]="tab.isSelected()"
+  >
     {{ tab.label }}
   </div>
 
   } }
 </div>
-
-<ng-content></ng-content>
+<div [@tabAnimation]="tabsState.selectedTab()">
+  <ng-content></ng-content>
+</div>

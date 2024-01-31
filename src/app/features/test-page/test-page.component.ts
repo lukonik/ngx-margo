@@ -16,6 +16,7 @@ import { AccordionBodyDirective } from '../../core/accordions/accordion-body.dir
 import { AccordionComponent } from '../../core/accordions/accordion/accordion.component';
 import { AccordionHeaderDirective } from '../../core/accordions/accordion-header.directive';
 import { AccordionsComponent } from '../../core/accordions/accordions.component';
+import { DatePickerComponent } from '../../core/date/date-picker/date-picker.component';
 
 @Component({
   selector: 'app-test-page',
@@ -36,6 +37,7 @@ import { AccordionsComponent } from '../../core/accordions/accordions.component'
     AccordionComponent,
     AccordionHeaderDirective,
     AccordionsComponent,
+    DatePickerComponent,
   ],
   templateUrl: './test-page.component.html',
   styleUrl: './test-page.component.scss',

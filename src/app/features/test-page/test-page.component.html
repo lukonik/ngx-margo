@@ -1,43 +1,9 @@
-<app-select label="hello">
-  @for (item of [1,2,3,4]; track $index) {
-  <app-select-item [value]="item"></app-select-item>
-  }
-</app-select>
-
-<app-multi-select label="Multi">
-  @for (item of [1,2,3,4]; track $index) {
-  <app-multi-select-item [value]="item"></app-multi-select-item>
-  }
-</app-multi-select>
-
-<app-radio-group>
-  @for (item of [1,2,3,4]; track $index) {
-  <app-radio-button [value]="item"></app-radio-button>
-  }
-</app-radio-group>
-
 <app-tabs>
   <app-tab label="First">
-    <ng-template appTabHeader>
-      <h1>AVOEI</h1>
-    </ng-template>
-    First Body
+    <ng-template appTabBody> First Body </ng-template>
   </app-tab>
   <app-tab label="Second">
     <ng-template appTabBody> I AM SECOND BODY </ng-template>
   </app-tab>
   <app-tab label="Third"> Third Body </app-tab>
 </app-tabs>
-
-<!-- <app-accordions>
-  <app-accordion label="First">
-    <ng-template appAccordionHeader>
-      <h1>AVOEI</h1>
-    </ng-template>
-    First Body
-  </app-accordion>
-  <app-accordion label="Second">
-    <ng-template appAccordionBody> I AM SECOND BODY </ng-template>
-  </app-accordion>
-  <app-accordion label="Third"> Third Body </app-accordion>
-</app-accordions> -->
